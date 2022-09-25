@@ -1,37 +1,44 @@
 import React from 'react';
 
 const CurrResult = () => {
-    return (
-
-        <div className="flex space-x-2">
-            <div className="w-1/2">
-                <select id="currency-result" className="select outline outline-1 outline-slate-600 w-full max-w-sm">
+    return (<div className="flex w-5/6">
+            <div className="grid  h-60 flex-grow -py-2 -ml-4 px-2 bg-gray-100 place-items-center">
+                <select id="currency-result"
+                        className="text-gray-400 select outline outline-1 outline-slate-300 w-72 max-w-sm">
                     <option value="21000">Bitcoin(BTC)</option>
                     <option value="1500">Ethereum (ETH)</option>
                     <option value="400">Tether (USDT)</option>
                     <option value="500">Dogecoin (DOGE)</option>
                 </select>
-            </div>
-            <div className="mt-auto">
+                <div className="grid h-40 ml-4">
+                    <p><span id="coinumber">1</span> Bitcoin (BTC)
+                        </p>
+                        <p><span id="coinumber1">1</span> Ethereum (ETH)
+                        </p>
+                        <span>=</span>
+                        <p>
+                            <span className="font-bold hidden">21,626.17</span>
+                            <span>
+                  United States Dollar"$"
+                  (USD)</span></p>
+                    </div>
 
-                <button className="bg-blue-300 hover:bg-blue-500 w-auto h-auto rounded-sm" id="btn-blue">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 stroke-white" fill="none"
-                         viewBox="0 0 24 24"
-                         stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                              d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-                    </svg>
-                </button>
             </div>
-            <div className="w-1/2">
 
-                <select className="select outline outline-1 outline-slate-600 w-full max-w-xs">
+            <div className="flex flex-grow grid h-60 -py-2 -ml-4 px-2 bg-gray-100 place-items-center">
+                <select className="select outline outline-1 text-gray-600 outline-slate-300 w-72">
                     <option value="21000">United States Dollar "$" (USD)</option>
                     <option value="400">Argentine Peso "ARS" (ARS)</option>
                     <option value="500">Belarusian Ruble "Br" (BYN)</option>
                 </select>
-            </div>
-        </div>
+                <div className="grid h-40">
+                        <button className="btn-sm btn-ghost rounded border border-gray-300 m-6 text-gray-600">Refresh</button>
+                        <button className="btn-sm btn-ghost rounded border border-gray-300 m-6 text-gray-600">Save
+                            This Conversion</button>
+                    </div>
+                </div>
+    </div>
+
 
     );
 };
